@@ -15,20 +15,20 @@ export class MusicControllerComponent implements OnInit {
   // Material Style Advance Audio Player Playlist
   msaapPlaylist: Track[] = [
     {
-      title: 'Audio One Title',
-      link: 'Link to Audio One URL'
+      title: 'Hahahahahah',
+      link: 'Song-Gio-Jack-K-ICM.mp3'
     },
-    {
-      title: 'Audio Two Title',
-      link: 'Link to Audio Two URL'
-    },
-    {
-      title: 'Audio Three Title',
-      link: 'Link to Audio Three URL'
-    },
+    // {
+    //   title: 'Audio Two Title',
+    //   link: 'Link to Audio Two URL'
+    // },
+    // {
+    //   title: 'Audio Three Title',
+    //   link: 'Link to Audio Three URL'
+    // },
   ];
 
-  msbapDisplayTitle = false;
+  msbapDisplayTitle = true;
   constructor() { }
 
   ngOnInit() {
