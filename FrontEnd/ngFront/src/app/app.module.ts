@@ -10,6 +10,9 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { NgxAudioPlayerModule } from 'ngx-audio-player';
 import {MatIconModule} from '@angular/material/icon';
 import { LeftNavigationComponent } from './components/left-navigation/left-navigation.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatListModule} from '@angular/material/list';
 
 
 @NgModule({
@@ -25,7 +28,10 @@ import { LeftNavigationComponent } from './components/left-navigation/left-navig
     MatButtonModule,
     MatCheckboxModule,
     NgxAudioPlayerModule,
-    MatIconModule
+    MatIconModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
