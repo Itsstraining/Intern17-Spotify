@@ -9,12 +9,14 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { NgxAudioPlayerModule } from 'ngx-audio-player';
 import {MatIconModule} from '@angular/material/icon';
+import { LeftNavigationComponent } from './components/left-navigation/left-navigation.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     MusicControllerComponent,
+    LeftNavigationComponent,
   ],
   imports: [
     BrowserModule,
