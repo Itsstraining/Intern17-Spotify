@@ -11,6 +11,7 @@ describe('LeftNavigationComponent', () => {
       declarations: [ LeftNavigationComponent ]
     })
     .compileComponents();
+    
   }));
 
   beforeEach(() => {
