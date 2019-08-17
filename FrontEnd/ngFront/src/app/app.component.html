@@ -17,13 +17,14 @@
 
 
     <mat-sidenav-content>
-
         <mat-toolbar color="primary">
             <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
             <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
           </button>
             <span>Music</span>
         </mat-toolbar>
+
+        <app-music-overview></app-music-overview>
 
         <button (click)="_playSongService.playMusic()">play</button>
         <app-music-controller *ngIf="_playSongService.isAvailable()"></app-music-controller>

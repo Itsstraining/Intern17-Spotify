@@ -15,10 +15,14 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
 import { SongService } from './song.service';
 import { PlaySongServiceService } from './playSong_service/play-song-service.service';
+import { MusicOverviewComponent } from './components/music-overview/music-overview.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+
 @NgModule({
   declarations: [
     AppComponent,
     MusicControllerComponent,
+    MusicOverviewComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,7 +35,8 @@ import { PlaySongServiceService } from './playSong_service/play-song-service.ser
     HttpClientModule,
     MatSidenavModule,
     MatToolbarModule,
-    MatListModule
+    MatListModule,
+    MatGridListModule,
   ],
   providers: [SongService, PlaySongServiceService],
   bootstrap: [AppComponent]
