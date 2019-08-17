@@ -12,12 +12,18 @@ import { NgxAudioPlayerModule } from 'ngx-audio-player';
 import {MatIconModule} from '@angular/material/icon';
 import { ApiComponent } from './components/api/api.component';
 import { SongService } from './song.service'
+import { LeftNavigationComponent } from './components/left-navigation/left-navigation.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatListModule} from '@angular/material/list';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     MusicControllerComponent,
     ApiComponent,
+    LeftNavigationComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +33,10 @@ import { SongService } from './song.service'
     MatCheckboxModule,
     NgxAudioPlayerModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatListModule
   ],
   providers: [SongService],
   bootstrap: [AppComponent]
