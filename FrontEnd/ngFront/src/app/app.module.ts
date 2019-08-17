@@ -10,20 +10,15 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { NgxAudioPlayerModule } from 'ngx-audio-player';
 import {MatIconModule} from '@angular/material/icon';
-import { ApiComponent } from './components/api/api.component';
-import { SongService } from './song.service'
-import { LeftNavigationComponent } from './components/left-navigation/left-navigation.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
-
+import { SongService } from './song.service'
 
 @NgModule({
   declarations: [
     AppComponent,
     MusicControllerComponent,
-    ApiComponent,
-    LeftNavigationComponent,
   ],
   imports: [
     BrowserModule,
