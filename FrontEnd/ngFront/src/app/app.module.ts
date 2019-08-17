@@ -17,12 +17,15 @@ import { SongService } from './song.service';
 import { PlaySongServiceService } from './playSong_service/play-song-service.service';
 import { MusicOverviewComponent } from './components/music-overview/music-overview.component';
 import { MatGridListModule } from '@angular/material/grid-list';
+import {MatDividerModule} from '@angular/material/divider';
+import { SectionDividerComponent } from './components/section-divider/section-divider.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MusicControllerComponent,
     MusicOverviewComponent,
+    SectionDividerComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,6 +40,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatToolbarModule,
     MatListModule,
     MatGridListModule,
+    MatDividerModule,
   ],
   providers: [SongService, PlaySongServiceService],
   bootstrap: [AppComponent]
