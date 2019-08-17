@@ -1,6 +1,6 @@
 <mat-sidenav-container class="sidenav-container">
 
-    <mat-sidenav #drawer class="sidenav" fixedInViewport mode="push">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport mode="over">
 
         <mat-toolbar> Menu </mat-toolbar>
 
@@ -14,7 +14,10 @@
         </mat-nav-list>
 
     </mat-sidenav>
-
+    <mat-drawer-container class="example-container">
+        <mat-drawer mode="side" opened>Drawer content</mat-drawer>
+        <mat-drawer-content>Main content</mat-drawer-content>
+    </mat-drawer-container>
 
     <mat-sidenav-content>
 
@@ -23,9 +26,23 @@
             <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
           </button>
             <span>Music</span>
+            <span class="abv"> 123</span>
         </mat-toolbar>
 
-        <app-music-controller></app-music-controller>
+        <mat-drawer-container>
+            <mat-drawer mode="side" opened fixedInViewport>
+                <button mat-icon-button><mat-icon>home</mat-icon></button>
+
+                <button mat-icon-button><mat-icon>folder</mat-icon></button>
+
+                <button mat-icon-button><mat-icon>headset</mat-icon></button>
+            </mat-drawer>
+
+            <mat-drawer-content>
+                <app-music-controller></app-music-controller>
+            </mat-drawer-content>
+
+        </mat-drawer-container>
 
     </mat-sidenav-content>
 

@@ -19,3 +19,18 @@
 .right {
     padding-right: 30px;
 }
+
+mat-drawer {
+    width: 5%;
+    float: left;
+    text-align: center;
+}
+
+button {
+    margin: 10px;
+}
+
+mat-drawer-content {
+    width: 95%;
+    float: right;
+}

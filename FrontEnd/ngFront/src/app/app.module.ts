@@ -17,7 +17,7 @@ import {MatListModule} from '@angular/material/list';
 @NgModule({
   declarations: [
     AppComponent,
-    MusicControllerComponent,
+    MusicControllerComponent
   ],
   imports: [
     BrowserModule,
