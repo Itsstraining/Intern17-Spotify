@@ -22,8 +22,10 @@
 
 mat-drawer {
     width: 5%;
+    height: 1000px;
     float: left;
     text-align: center;
+    z-index: 1;
 }
 
 button {
