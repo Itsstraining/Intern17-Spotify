@@ -1,6 +1,6 @@
 <mat-sidenav-container class="sidenav-container">
 
-    <mat-sidenav #drawer class="sidenav" fixedInViewport mode="push">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport mode="over">
 
         <mat-toolbar> Menu </mat-toolbar>
 
@@ -11,10 +11,15 @@
                 <mat-icon aria-hidden="false" aria-label="Example home icon" class="right">folder</mat-icon>Browse</a>
             <a mat-list-item href="#">
                 <mat-icon aria-hidden="false" aria-label="Example home icon" class="right">headset</mat-icon>Playlist</a>
+            <a mat-list-item href="#">
+                <mat-icon aria-hidden="false" aria-label="Example home icon" class="right">add_circle_outline</mat-icon>Add Playlist</a>
         </mat-nav-list>
 
     </mat-sidenav>
-
+    <mat-drawer-container class="example-container">
+        <mat-drawer mode="side" opened>Drawer content</mat-drawer>
+        <mat-drawer-content>Main content</mat-drawer-content>
+    </mat-drawer-container>
 
     <mat-sidenav-content>
 
@@ -23,10 +28,23 @@
             <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
           </button>
             <span>Music</span>
+            <span class="abv"> 123</span>
         </mat-toolbar>
 
-        <button (click)="_playSongService.playMusic()">play</button>
-        <app-music-controller *ngIf="_playSongService.isAvailable()"></app-music-controller>
+        <mat-drawer-container>
+            <mat-drawer mode="side" opened fixedInViewport>
+                <button mat-icon-button><mat-icon>home</mat-icon></button>
+
+                <button mat-icon-button><mat-icon>folder</mat-icon></button>
+
+                <button mat-icon-button><mat-icon>headset</mat-icon></button>
+            </mat-drawer>
+            <mat-drawer-content>
+                <!--Add new content here-->
+                <app-music-controller></app-music-controller>
+            </mat-drawer-content>
+
+        </mat-drawer-container>
 
     </mat-sidenav-content>
 

@@ -18,7 +18,7 @@ import { PlaySongServiceService } from './playSong_service/play-song-service.ser
 @NgModule({
   declarations: [
     AppComponent,
-    MusicControllerComponent,
+    MusicControllerComponent
   ],
   imports: [
     BrowserModule,
