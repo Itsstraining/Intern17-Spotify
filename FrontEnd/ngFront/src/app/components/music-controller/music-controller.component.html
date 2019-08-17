@@ -1,5 +1,6 @@
+<button (click)="playMusic()">play</button>
 <div id="musicPlayingBar_container">
-    <mat-advanced-audio-player id="musicPlayingBar" [playlist]="msaapPlaylist" [displayTitle]="msaapDisplayTitle"
+    <mat-advanced-audio-player *ngIf="isAvailable()" id="musicPlayingBar" [playlist]="msaapPlaylist" [displayTitle]="msaapDisplayTitle"
         [displayPlaylist]="msaapDisplayPlayList" [pageSizeOptions]="msaapPageSizeOptions" [expanded]="true"
         [displayVolumeControls]="true"></mat-advanced-audio-player>
 </div>

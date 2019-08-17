@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  link_app: string;
+  eventHandle(value) {
+    this.link_app = value;
+    console.log(this.link_app);
+  }
+
   title = 'ngFront';
 }
