@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { PlaySongServiceService } from './playSong_service/play-song-service.service';
 
 @Component({
   selector: 'app-root',
@@ -7,10 +8,7 @@ import { Component, Input } from '@angular/core';
 })
 export class AppComponent {
 
-  link_app: string;
-  eventHandle(value) {
-    this.link_app = value;
-    console.log(this.link_app);
+  constructor ( public _playSongService: PlaySongServiceService ) {
   }
 
   title = 'ngFront';

@@ -13,8 +13,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
-import { SongService } from './song.service'
-
+import { SongService } from './song.service';
+import { PlaySongServiceService } from './playSong_service/play-song-service.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +33,7 @@ import { SongService } from './song.service'
     MatToolbarModule,
     MatListModule
   ],
-  providers: [SongService],
+  providers: [SongService, PlaySongServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

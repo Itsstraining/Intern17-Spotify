@@ -25,7 +25,8 @@
             <span>Music</span>
         </mat-toolbar>
 
-        <app-music-controller></app-music-controller>
+        <button (click)="_playSongService.playMusic()">play</button>
+        <app-music-controller *ngIf="_playSongService.isAvailable()"></app-music-controller>
 
     </mat-sidenav-content>
 
