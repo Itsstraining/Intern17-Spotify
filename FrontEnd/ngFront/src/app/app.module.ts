@@ -19,6 +19,8 @@ import { MusicOverviewComponent } from './components/music-overview/music-overvi
 import { MatGridListModule } from '@angular/material/grid-list';
 import {MatDividerModule} from '@angular/material/divider';
 import { SectionDividerComponent } from './components/section-divider/section-divider.component';
+import { LogomucsicComponent } from './components/logomucsic/logomucsic.component';
+import { SearchNavComponent } from './components/search-nav/search-nav.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { SectionDividerComponent } from './components/section-divider/section-di
     MusicControllerComponent,
     MusicOverviewComponent,
     SectionDividerComponent,
+    LogomucsicComponent,
+    SearchNavComponent,
   ],
   imports: [
     BrowserModule,
