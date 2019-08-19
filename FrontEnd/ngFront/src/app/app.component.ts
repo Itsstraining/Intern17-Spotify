@@ -8,7 +8,7 @@ import { PlaySongServiceService } from './playSong_service/play-song-service.ser
 })
 export class AppComponent {
 
-  constructor ( public _playSongService: PlaySongServiceService ) {
+  constructor () {
   }
 
   title = 'ngFront';

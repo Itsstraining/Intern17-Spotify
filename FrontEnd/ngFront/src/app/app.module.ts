@@ -19,6 +19,7 @@ import { MusicOverviewComponent } from './components/music-overview/music-overvi
 import { MatGridListModule } from '@angular/material/grid-list';
 import {MatDividerModule} from '@angular/material/divider';
 import { SectionDividerComponent } from './components/section-divider/section-divider.component';
+import { GetInfoService } from './getInfo_service/get-info.service';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,7 @@ import { SectionDividerComponent } from './components/section-divider/section-di
     MatGridListModule,
     MatDividerModule,
   ],
-  providers: [SongService, PlaySongServiceService],
+  providers: [SongService, PlaySongServiceService, GetInfoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

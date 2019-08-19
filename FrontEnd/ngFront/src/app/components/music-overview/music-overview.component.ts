@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { GetInfoService } from '../../getInfo_service/get-info.service';
+import { PlaySongServiceService } from '../../playSong_service/play-song-service.service'
 @Component({
   selector: 'app-music-overview',
   templateUrl: './music-overview.component.html',
@@ -7,12 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MusicOverviewComponent implements OnInit {
 
-  constructor() { }
+  constructor(public _getInfoService: GetInfoService, public _playSongService: PlaySongServiceService ) { }
 
-  numberOfMusic = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]
-  column = 4;
-  row = 4;
+  songInfo = [];
+  numberOfMusic = [0,1,2];
+  
   ngOnInit() {
+    this.songInfo = this._getInfoService.getSongInfo();
   }
 
 }
