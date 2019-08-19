@@ -15,10 +15,21 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
 import { SongService } from './song.service';
 import { PlaySongServiceService } from './playSong_service/play-song-service.service';
+import { MusicOverviewComponent } from './components/music-overview/music-overview.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import {MatDividerModule} from '@angular/material/divider';
+import { SectionDividerComponent } from './components/section-divider/section-divider.component';
+import { LogomucsicComponent } from './components/logomucsic/logomucsic.component';
+import { SearchNavComponent } from './components/search-nav/search-nav.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    MusicControllerComponent
+    MusicControllerComponent,
+    MusicOverviewComponent,
+    SectionDividerComponent,
+    LogomucsicComponent,
+    SearchNavComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,7 +42,9 @@ import { PlaySongServiceService } from './playSong_service/play-song-service.ser
     HttpClientModule,
     MatSidenavModule,
     MatToolbarModule,
-    MatListModule
+    MatListModule,
+    MatGridListModule,
+    MatDividerModule,
   ],
   providers: [SongService, PlaySongServiceService],
   bootstrap: [AppComponent]
