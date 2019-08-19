@@ -18,6 +18,10 @@
                 <mat-icon aria-hidden="false" aria-label="Example home icon" class="right">add_circle_outline</mat-icon>
                 Add Playlist
             </a>
+            <a mat-list-item href="#">
+                <mat-icon aria-hidden="false" aria-label="Example home icon" class="right">settings</mat-icon>
+                Settings
+            </a>
         </mat-nav-list>
 
     </mat-sidenav>
@@ -31,8 +35,8 @@
             <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
                 <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
             </button>
-            <span>Music</span>
-            <span class="abv"> 123</span>
+            <app-logomucsic></app-logomucsic>
+            <app-search-nav></app-search-nav>
         </mat-toolbar>
 
         <mat-drawer-container>
@@ -47,6 +51,12 @@
 
                 <button mat-icon-button>
                     <mat-icon>headset</mat-icon>
+                </button>
+                <button mat-icon-button>
+                    <mat-icon>add_circle_outline</mat-icon>
+                </button>
+                <button mat-icon-button>
+                    <mat-icon>settings</mat-icon>
                 </button>
             </mat-drawer>
             <mat-drawer-content>
