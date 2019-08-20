@@ -1,5 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -14,13 +18,20 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
 import { SongService } from './song.service';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatInputModule} from '@angular/material/input';
+
+
 import { PlaySongServiceService } from './playSong_service/play-song-service.service';
 import { MusicOverviewComponent } from './components/music-overview/music-overview.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import {MatDividerModule} from '@angular/material/divider';
 import { SectionDividerComponent } from './components/section-divider/section-divider.component';
+import { GetInfoService } from './getInfo_service/get-info.service';
 import { LogomucsicComponent } from './components/logomucsic/logomucsic.component';
 import { SearchNavComponent } from './components/search-nav/search-nav.component';
+import { environment } from 'src/environments/environment';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
@@ -30,8 +41,13 @@ import { SearchNavComponent } from './components/search-nav/search-nav.component
     SectionDividerComponent,
     LogomucsicComponent,
     SearchNavComponent,
+    SidenavComponent,
   ],
   imports: [
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    AngularFireAuthModule,
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -45,8 +61,10 @@ import { SearchNavComponent } from './components/search-nav/search-nav.component
     MatListModule,
     MatGridListModule,
     MatDividerModule,
+    MatMenuModule,
+    MatInputModule
   ],
-  providers: [SongService, PlaySongServiceService],
+  providers: [SongService, PlaySongServiceService, GetInfoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

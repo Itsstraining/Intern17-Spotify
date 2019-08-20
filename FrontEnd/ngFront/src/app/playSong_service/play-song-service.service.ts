@@ -22,15 +22,13 @@ export class PlaySongServiceService {
     return this.msaapDisplayTitle != null && this.msaapDisplayPlayList != null && this.msaapPageSizeOptions != null && this.msaapPlaylist.length != 0;
   }
 
-  public songs = [];
-
-  public playMusic() {
+  public playMusic(id) {
     this.msaapDisplayTitle = true;
     this.msaapDisplayPlayList = true;
     this.msaapPageSizeOptions = [3];
     this.msaapDisplayVolumeControls = true;
     // Material Style Advance Audio Player Playlist
-    this.songs = this._songService.getMusic();
-    this.msaapPlaylist = this.songs;
+    console.log(id);
+    this.msaapPlaylist = this._songService.getMusic(id);
   }
 }
