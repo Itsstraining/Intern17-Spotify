@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { auth } from 'firebase';
 import { AngularFireAuth } from "@angular/fire/auth";
 import { Router } from '@angular/router';
-
+import { PlaySongServiceService } from '../../playSong_service/play-song-service.service';
 @Component({
   selector: 'app-search-nav',
   templateUrl: './search-nav.component.html',
@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class SearchNavComponent implements OnInit {
 
  
-  constructor(public afAuth: AngularFireAuth, public router: Router) {
+  constructor(public afAuth: AngularFireAuth, public router: Router, public _playSongService: PlaySongServiceService) {
     this.afAuth.user.subscribe((usr) => {
       this.name = usr.displayName
       this.img = usr.photoURL
@@ -24,8 +24,7 @@ export class SearchNavComponent implements OnInit {
   value=""
   
   async logout() {
-    await this.afAuth.auth.signOut();
-   
+    await this.afAuth.auth.signOut();   
   }
   async login(){
     const provider = new auth.GoogleAuthProvider();
