@@ -1,7 +1,21 @@
 .musicDiv {
-    margin: 5px;
+    margin: 3px;
+    margin-left: 15px;
     background: red;
-    width: 200px;
-    height: 250px;
+    width: 185px;
+    height: 325px;
     float: left;
+}
+
+.songImg {
+    width: 185px;
+    height: 185px;
+}
+
+.songName {
+    word-break: break-word;
+}
+
+.songDes {
+    word-break: break-word;
 }
