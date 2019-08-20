@@ -11,7 +11,6 @@ export class MusicOverviewComponent implements OnInit {
   constructor(public _getInfoService: GetInfoService, public _playSongService: PlaySongServiceService ) { }
 
   songInfo = [];
-  songIndex: string;
 
   ngOnInit() {
     this.songInfo = this._getInfoService.getSongInfo();
