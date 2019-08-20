@@ -19,6 +19,7 @@ import { MusicOverviewComponent } from './components/music-overview/music-overvi
 import { MatGridListModule } from '@angular/material/grid-list';
 import {MatDividerModule} from '@angular/material/divider';
 import { SectionDividerComponent } from './components/section-divider/section-divider.component';
+import { GetInfoService } from './getInfo_service/get-info.service';
 import { LogomucsicComponent } from './components/logomucsic/logomucsic.component';
 import { SearchNavComponent } from './components/search-nav/search-nav.component';
 
@@ -46,7 +47,7 @@ import { SearchNavComponent } from './components/search-nav/search-nav.component
     MatGridListModule,
     MatDividerModule,
   ],
-  providers: [SongService, PlaySongServiceService],
+  providers: [SongService, PlaySongServiceService, GetInfoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

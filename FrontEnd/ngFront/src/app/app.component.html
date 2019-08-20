@@ -25,10 +25,6 @@
         </mat-nav-list>
 
     </mat-sidenav>
-    <mat-drawer-container class="example-container">
-        <mat-drawer mode="side" opened>Drawer content</mat-drawer>
-        <mat-drawer-content>Main content</mat-drawer-content>
-    </mat-drawer-container>
 
     <mat-sidenav-content>
         <mat-toolbar color="primary">
@@ -62,7 +58,6 @@
             <mat-drawer-content>
                 <!--Add new content here-->
                 <app-section-divider></app-section-divider>
-                <button (click)="_playSongService.playMusic()">play</button>
                 <app-music-controller *ngIf="_playSongService.isAvailable()"></app-music-controller>
             </mat-drawer-content>
 
