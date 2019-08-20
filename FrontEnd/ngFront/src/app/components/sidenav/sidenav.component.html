@@ -1,0 +1,19 @@
+<mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav mode=over>
+        <button mat-button>
+        <mat-icon aria-hidden="false" aria-label="Example home icon" class="right">home</mat-icon> Home
+    </button>
+        <button mat-button>
+            <mat-icon aria-hidden="false" aria-label="Example home icon" class="right">home</mat-icon> Home
+        </button>
+        <button mat-button>
+                <mat-icon aria-hidden="false" aria-label="Example home icon" class="right">home</mat-icon> Home
+            </button>
+        <button mat-button>
+                    <mat-icon aria-hidden="false" aria-label="Example home icon" class="right">home</mat-icon> Home
+                </button>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <p><button mat-button (click)="sidenav.toggle()"> <mat-icon aria-label="Side nav toggle icon">menu</mat-icon></button></p>
+    </mat-sidenav-content>
+</mat-sidenav-container>
