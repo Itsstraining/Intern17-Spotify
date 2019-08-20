@@ -20,7 +20,7 @@ import {MatListModule} from '@angular/material/list';
 import { SongService } from './song.service';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatInputModule} from '@angular/material/input';
-
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 import { PlaySongServiceService } from './playSong_service/play-song-service.service';
 import { MusicOverviewComponent } from './components/music-overview/music-overview.component';
@@ -62,7 +62,8 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     MatGridListModule,
     MatDividerModule,
     MatMenuModule,
-    MatInputModule
+    MatInputModule,
+    MatTooltipModule,
   ],
   providers: [SongService, PlaySongServiceService, GetInfoService],
   bootstrap: [AppComponent]
