@@ -1,5 +1,5 @@
-<mat-list *ngFor="let item of items" class="sectionDiv">
-        <mat-list-item>{{item}}</mat-list-item>
+<mat-list *ngFor="let section of sectionsByGenre" class="sectionDiv">
+        <mat-list-item>{{section}}</mat-list-item>
         <mat-divider></mat-divider>
-        <app-music-overview></app-music-overview>
+        <app-music-overview [sec] = "section"></app-music-overview>
 </mat-list>   

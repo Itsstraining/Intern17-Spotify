@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { GetInfoService } from '../../getInfo_service/get-info.service';
 import { PlaySongServiceService } from '../../playSong_service/play-song-service.service'
 @Component({
@@ -8,6 +8,8 @@ import { PlaySongServiceService } from '../../playSong_service/play-song-service
 })
 export class MusicOverviewComponent implements OnInit {
 
+  @Input() sec: string;
+  
   constructor(public _getInfoService: GetInfoService, public _playSongService: PlaySongServiceService ) { }
 
   songInfo = [];
