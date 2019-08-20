@@ -13,5 +13,9 @@
 }
 
 .songName {
-    width: auto;
+    word-break: break-word;
+}
+
+.songDes {
+    word-break: break-word;
 }

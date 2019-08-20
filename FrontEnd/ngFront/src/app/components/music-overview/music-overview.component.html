@@ -1,8 +1,6 @@
 <div *ngFor="let info of songInfo" class="musicDiv">
-    <img class="songImg" src="https://doc-04-48-docs.googleusercontent.com/docs/securesc/v2c06rnfl7q09sbe0jl768br60fon31q/7qg668ecck7fd6h1jivsko0qk5us23ke/1566180000000/03076573627755738759/02573816330077391948/1d2bOVEMhsgO0cNg0_VTdKGANkV_fTl4x?e=download&h=12197798507535439673&nonce=71g2qmfjon4q4&user=02573816330077391948&hash=oa2tkkshr9v5de1dp691rm1betffk5f7" alt="">
-    <app-section-divider></app-section-divider>
-    <button (click)="_playSongService.playMusic()">play</button>
-    <app-music-controller *ngIf="_playSongService.isAvailable()"></app-music-controller>
+    <img class="songImg" src="../../../assets/images/logo.png" alt="">
+    <button (click)="songIndex = _getInfoService.getSongID(songInfo.indexOf(info))" (click)="_playSongService.playMusic(songIndex)">play</button>
     <p class="songName">{{info.name}}</p>
     <p class="songDes">{{info.description}}</p>
 </div>

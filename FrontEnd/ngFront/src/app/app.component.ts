@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { PlaySongServiceService } from './playSong_service/play-song-service.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { PlaySongServiceService } from './playSong_service/play-song-service.ser
 })
 export class AppComponent {
 
-  constructor () {
+  constructor (public _playSongService: PlaySongServiceService ) {
   }
 
   title = 'ngFront';
