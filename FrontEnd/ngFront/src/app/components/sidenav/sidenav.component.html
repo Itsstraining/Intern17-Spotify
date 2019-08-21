@@ -14,10 +14,8 @@
                 </button>
                 <div class="libSongs">
                     <p *ngFor="let libSong of _getInfoService.librarySongs" class="librarySongs">
-                        <a href="#" *ngIf="libSong.songName.length > 15"
-                            class="librarySongsLink">{{libSong.songName.substring(0,16) + '...'}}</a>
-                        <a href="#" *ngIf="libSong.songName.length < 15"
-                            class="librarySongsLink">{{libSong.songName}}</a>
+                        <a href="#" *ngIf="libSong.songName.length > 15" class="librarySongsLink">{{libSong.songName.substring(0,16) + '...'}}</a>
+                        <a href="#" *ngIf="libSong.songName.length < 15" class="librarySongsLink">{{libSong.songName}}</a>
                     </p>
                 </div>
             </li>

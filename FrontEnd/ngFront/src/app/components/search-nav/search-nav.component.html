@@ -1,33 +1,12 @@
 <!-- Calling GoogleAuth() Api from AuthService -->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-<mat-toolbar color="primary">
-    <app-sidenav></app-sidenav>
-
-    <div class="search">
-        <mat-form-field class="example-form-field">
-            <i class="material-icons">search</i>
-            <input matInput type="text" [(ngModel)]="value">
-            <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
-                  <mat-icon>close</mat-icon>
-                </button>
-        </mat-form-field>
-    </div>
-
-    <div class="menu">
-        <button class="menu" mat-button [matMenuTriggerFor]="beforeMenu"><img width="30px" height="30px" src="{{img}}" alt=""></button>
-        <mat-menu #beforeMenu="matMenu" xPosition="before">
-            <h2 class="menu1" mat-menu-item><i class="material-icons">
-                    perm_identity
-                    </i>{{name}}</h2>
-            <span class="menu1" mat-menu-item><i class="material-icons">
-                    email
-                    </i>{{email}}</span>
-            <hr>
-            <div class="menu2">
-                <button (click)="login()" width="20px" mat-stroked-button color="primary"><i class="material-icons">input</i>LogIn</button>
-                <button (click)="logout()" width="20px" mat-stroked-button><i class="material-icons">arrow_right_alt</i>LogOut</button>
-            </div>
-        </mat-menu>
-    </div>
-</mat-toolbar>
+<div class="search">
+    <mat-form-field class="example-form-field">
+        <i class="material-icons">search</i>
+        <input matInput type="text" [(ngModel)]="value">
+        <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+            <mat-icon>close</mat-icon>
+        </button>
+    </mat-form-field>
+</div>

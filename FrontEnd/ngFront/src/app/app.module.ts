@@ -32,6 +32,7 @@ import { LogomucsicComponent } from './components/logomucsic/logomucsic.componen
 import { SearchNavComponent } from './components/search-nav/search-nav.component';
 import { environment } from 'src/environments/environment';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { LoginmenuComponent } from './components/loginmenu/loginmenu.component';
 import { SongDetailsComponent } from './components/song-details/song-details.component';
 
 @NgModule({
@@ -43,6 +44,7 @@ import { SongDetailsComponent } from './components/song-details/song-details.com
     LogomucsicComponent,
     SearchNavComponent,
     SidenavComponent,
+    LoginmenuComponent,
     SongDetailsComponent,
   ],
   imports: [
