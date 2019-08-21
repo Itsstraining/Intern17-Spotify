@@ -1,28 +1,27 @@
-<app-search-nav></app-search-nav>
+<mat-toolbar class="container">
+    <app-sidenav class="item item1"></app-sidenav>
+    <app-logomucsic class="item item2"></app-logomucsic>
+    <span class="example-fill-remaining-space"></span>
+    <app-search-nav class="item item3"></app-search-nav>
+    <span class="example-fill-remaining-space2"></span>
+    <app-loginmenu class="item item4"></app-loginmenu>
+</mat-toolbar>
 
 <mat-drawer-container>
 
-    <mat-drawer mode="side" opened fixedInViewport class="buticon">
-        <button mat-button>
+    <mat-drawer mode="side" opened fixedInViewport>
+        <button mat-flat-button>
                     <mat-icon>home</mat-icon>
                 </button>
 
-        <button mat-button>
-                    <mat-icon>folder</mat-icon>
-                </button>
-
-        <button mat-button>
-                    <mat-icon>headset</mat-icon>
-                </button>
-        <button mat-button>
+        <button mat-flat-button>
                     <mat-icon>add_circle_outline</mat-icon>
                 </button>
-        <button mat-button>
-                    <mat-icon>settings</mat-icon>
-                </button>
+
     </mat-drawer>
 
     <mat-drawer-content>
+
         <!--Add new content here-->
         <app-section-divider></app-section-divider>
         <app-music-controller *ngIf="_playSongService.isAvailable()"></app-music-controller>
@@ -30,5 +29,6 @@
     </mat-drawer-content>
 
 </mat-drawer-container>
+
 
 <router-outlet></router-outlet>

@@ -1,9 +1,17 @@
+.container {
+    display: flex;
+    padding: 0 0px;
+}
+
 .logo {
     text-align: center;
-    margin-top: 5px;
 }
 
 img {
     height: 40px;
     width: 40px;
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
 }

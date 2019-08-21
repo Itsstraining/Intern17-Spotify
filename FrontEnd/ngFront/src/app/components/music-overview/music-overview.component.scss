@@ -10,12 +10,69 @@
 .songImg {
     width: 185px;
     height: 185px;
+    position: absolute;
 }
+
+.container {
+    padding: unset;
+    width: 185px;
+    height: 185px;
+    position: absolute;
+    background: black;
+    opacity: 0;
+}
+
+.container:hover {
+    opacity: 0.7;
+    .playMusic {
+        margin-top: 60px;
+        margin-left: 64px;
+        position: absolute;
+        background: transparent;
+        border: 2px white solid;
+    }
+
+    mat-icon {
+        margin: -10px 0px 0px -5px;
+        font-size: 30px;
+
+    }
+
+    .playMusic:hover {
+        width: 70px;
+        height: 70px;
+        margin: 55px 62px 0px 58px; 
+        border: 4px white solid;
+        mat-icon {
+            margin: -5px 0px 0px -3px;
+            font-size: 40px;
+            width: 70px;
+            height: 70px;
+        }
+    }
+
+    .loveButton {
+        color: white;
+        position: absolute;
+        margin-top: 132px;
+        margin-left: 73px;
+    }
+} 
 
 .songName {
     word-break: break-word;
+    margin-top: 210px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: unset;
 }
 
 .songDes {
     word-break: break-word;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: inherit;
+    color: rgb(70, 70, 70);
+    margin-top: unset;
 }
+
