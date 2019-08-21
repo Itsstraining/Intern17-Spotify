@@ -9,15 +9,27 @@
                     <mat-icon aria-hidden="false" aria-label="Example home icon" class="right">folder</mat-icon> Browser
                 </button></li>
             <li><button mat-button>
-                    <mat-icon aria-hidden="false" aria-label="Example home icon" class="right">headset</mat-icon> Playlist
-                </button></li>
+                    <mat-icon aria-hidden="false" aria-label="Example home icon" class="right">headset</mat-icon>
+                    Playlist
+                </button>
+                <div class="libSongs">
+                    <p *ngFor="let libSong of _getInfoService.librarySongs" class="librarySongs">
+                        <a href="#" *ngIf="libSong.songName.length > 15"
+                            class="librarySongsLink">{{libSong.songName.substring(0,16) + '...'}}</a>
+                        <a href="#" *ngIf="libSong.songName.length < 15"
+                            class="librarySongsLink">{{libSong.songName}}</a>
+                    </p>
+                </div>
+            </li>
             <li><button mat-button>
-                    <mat-icon aria-hidden="false" aria-label="Example home icon" class="right">add_circle_outline</mat-icon>
+                    <mat-icon aria-hidden="false" aria-label="Example home icon" class="right">add_circle_outline
+                    </mat-icon>
                     Add
                     Playlist
                 </button></li>
             <li><button mat-button>
-                    <mat-icon aria-hidden="false" aria-label="Example home icon" class="right">settings</mat-icon> Settings
+                    <mat-icon aria-hidden="false" aria-label="Example home icon" class="right">settings</mat-icon>
+                    Settings
                 </button></li>
         </ul>
     </mat-sidenav>
