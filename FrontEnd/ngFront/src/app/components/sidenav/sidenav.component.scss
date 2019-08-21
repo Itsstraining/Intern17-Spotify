@@ -1,7 +1,26 @@
-.example-container {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+.mat-sidenav-container {
+    position: unset;
+    display: initial;
+    background-color: transparent;
+}
+
+.mat-sidenav {
+    width: 150px;
+}
+
+ul {
+    list-style: none;
+    text-align: left;
+    size: 50px;
+    margin: 0px;
+    padding: 0px;
+    size: 75px;
+}
+
+mat-button {
+    padding: 100%;
+}
+
+.librarySongsLink {
+    text-decoration: none;
 }

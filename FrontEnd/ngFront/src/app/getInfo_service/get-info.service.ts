@@ -1,16 +1,15 @@
 import { Injectable } from '@angular/core';
-import { element } from 'protractor';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GetInfoService {
-  infos = [
+  public songs = [
     {
       genre: 'pop',
       image: 'https://doc-04-48-docs.googleusercontent.com/docs/securesc/v2c06rnfl7q09sbe0jl768br60fon31q/7qg668ecck7fd6h1jivsko0qk5us23ke/1566180000000/03076573627755738759/02573816330077391948/1d2bOVEMhsgO0cNg0_VTdKGANkV_fTl4x?e=download&h=12197798507535439673&nonce=71g2qmfjon4q4&user=02573816330077391948&hash=oa2tkkshr9v5de1dp691rm1betffk5f7',
-      songName: 'test1',
-      description: 'hhskjhfkjhjkhghjgbbfjjgfjhdgjkhkhkdjhkfjhk dhgjhkjhjkbjbrhkghkhrjhjkfsdhrhjhgjkhjshdjhf',
+      songName: 'test1111111111111111111111111',
+      description: 'hhskjhfkjhjkhghjgbbfjjgfjhdgjkhkhkdjhkfjhk dhgjhkjhjkbjbrhkghkhrjhjkfsdhrhjhgjkhjshdjhflbkmldmlkmdkmklmdlkmfkdmblkmdfkdmldkmblkmdlkf',
       songID: '1',
       url: 'http://vnso-zn-15-tf-mp3-s1-zmp3.zadn.vn/aade6bfe6dba84e4ddab/1304905352684140357?authen=exp=1566091359~acl=/aade6bfe6dba84e4ddab/*~hmac=d9fd6a48da1b00228856ed754681a35f&filename=HAPPY-BIRTHDAY-TO-YOU-Hayashibara-Megumi.mp3',
     },
@@ -32,32 +31,29 @@ export class GetInfoService {
     },
   ]
 
+  librarySongs = [];
+
   getSongInfo() {
 
     //API
 
-    for (let info of this.infos) {
-      if (info.description.length > 60) {
-        info.description = info.description.substring(0, 61);
-      }
-    }
-    return this.infos;
+    return this.songs;
   }
 
 
   displaySongByGenre(genre) {
     //API
 
-    let songByGenre = this.infos.filter((element) => {
+    let songByGenre = this.songs.filter((element) => {
       return element.genre == genre.toLowerCase();
     });
 
     //Run the loop to utilize the API of getting song by genre (equal to get all the song displaying inside the body)
     // for (let song of songByGenre) {
-    //   this.infos.push(song);
+    //   this.songs.push(song);
     // }
-    
-    for (let info of this.infos) {
+
+    for (let info of this.songs) {
       if (info.description.length > 60) {
         info.description = info.description.substring(0, 61);
       }
@@ -66,11 +62,33 @@ export class GetInfoService {
   }
 
   getSong(index) {
-    for (let info in this.infos) {
+    for (let info in this.songs) {
       if (info == index) {
-        return this.infos[index];
+        return this.songs[index];
       }
     }
+  }
+
+  manipulateOnLib(index) {
+    for (let song in this.songs) {
+      if (song == index) {
+        if (this.librarySongs.length == 0) {
+          this.librarySongs.push(this.songs[song]);
+          return 'added';
+        }
+        else {
+          for (let libsong of this.librarySongs) {
+            if (this.songs[song].songID == libsong.songID) {
+              this.librarySongs.splice(this.librarySongs.indexOf(libsong), 1);
+              return 'removed';
+            }
+          }
+          this.librarySongs.push(this.songs[song]);
+          return 'added';
+        }
+      }
+    }
+    //API
   }
 
   constructor() { }
