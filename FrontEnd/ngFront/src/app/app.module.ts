@@ -32,6 +32,7 @@ import { LogomucsicComponent } from './components/logomucsic/logomucsic.componen
 import { SearchNavComponent } from './components/search-nav/search-nav.component';
 import { environment } from 'src/environments/environment';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { LoginmenuComponent } from './components/loginmenu/loginmenu.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     LogomucsicComponent,
     SearchNavComponent,
     SidenavComponent,
+    LoginmenuComponent,
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),

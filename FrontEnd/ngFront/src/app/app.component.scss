@@ -1,35 +1,25 @@
-body {
+* {
     margin: 0%;
     padding: 0%;
 }
 
-mat-drawer {
-    width: 5%;
-    height: 100%;
-    float: left;
-    text-align: left;
-    z-index: 1;
+.container {
+    display: flex;
 }
 
-mat-drawer-content {
-    width: 95%;
-    float: right;
+.item {
+    margin: 0px;
+    padding: 0px;
 }
 
-mat-icon {
-    font-size: 30px;
+.example-fill-remaining-space {
+    flex: 3 1 auto;
 }
 
-button {
-    width: 100%;
-    size: 25px;
-    margin-top: 15px;
+.example-fill-remaining-space2 {
+    flex: 1 1 auto;
 }
 
-mat-drawer-content {
-    overflow: unset;
-}
-
-mat-icon {
-    font-size: 35px;
+.item3 {
+    flex-grow: 2;
 }

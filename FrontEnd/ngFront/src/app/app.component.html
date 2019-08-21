@@ -1,5 +1,11 @@
-<app-search-nav></app-search-nav>
-
+<mat-toolbar class="container">
+    <app-sidenav class="item item1"></app-sidenav>
+    <app-logomucsic class="item item2"></app-logomucsic>
+    <span class="example-fill-remaining-space"></span>
+    <app-search-nav class="item item3"></app-search-nav>
+    <span class="example-fill-remaining-space2"></span>
+    <app-loginmenu class="item item4"></app-loginmenu>
+</mat-toolbar>
 <mat-drawer-container>
 
     <mat-drawer mode="side" opened fixedInViewport class="buticon">
@@ -30,5 +36,6 @@
     </mat-drawer-content>
 
 </mat-drawer-container>
+
 
 <router-outlet></router-outlet>
