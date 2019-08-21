@@ -1,21 +1,31 @@
 <mat-sidenav-container class="example-container">
-    <mat-sidenav #sidenav mode=over>
-        <div fxLayout="column">
-            <button mat-button>
-        <mat-icon aria-hidden="false" aria-label="Example home icon" class="right">home</mat-icon> Home
-    </button>
-            <button mat-button>
-            <mat-icon aria-hidden="false" aria-label="Example home icon" class="right">home</mat-icon> Home
-        </button>
-            <button mat-button>
-                <mat-icon aria-hidden="false" aria-label="Example home icon" class="right">home</mat-icon> Home
-            </button>
-            <button mat-button>
+
+    <mat-sidenav #sidenav>
+        <ul>
+            <li><button mat-button>
                     <mat-icon aria-hidden="false" aria-label="Example home icon" class="right">home</mat-icon> Home
-                </button>
-        </div>
+                </button></li>
+            <li><button mat-button>
+                    <mat-icon aria-hidden="false" aria-label="Example home icon" class="right">folder</mat-icon> Browser
+                </button></li>
+            <li><button mat-button>
+                    <mat-icon aria-hidden="false" aria-label="Example home icon" class="right">headset</mat-icon> Playlist
+                </button></li>
+            <li><button mat-button>
+                    <mat-icon aria-hidden="false" aria-label="Example home icon" class="right">add_circle_outline</mat-icon>
+                    Add
+                    Playlist
+                </button></li>
+            <li><button mat-button>
+                    <mat-icon aria-hidden="false" aria-label="Example home icon" class="right">settings</mat-icon> Settings
+                </button></li>
+        </ul>
     </mat-sidenav>
+
     <mat-sidenav-content>
-        <p><button mat-button (click)="sidenav.toggle()"> <mat-icon aria-label="Side nav toggle icon">menu</mat-icon></button></p>
+        <p><button mat-button (click)="sidenav.toggle()">
+                <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+            </button></p>
     </mat-sidenav-content>
+
 </mat-sidenav-container>

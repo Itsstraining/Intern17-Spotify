@@ -1,6 +1,6 @@
 <div *ngFor="let info of songInfo" class="musicDiv">
     <img class="songImg" src="../../../assets/images/logo.png" alt="">
-    <button (click)="songIndex = _getInfoService.getSongID(songInfo.indexOf(info))" (click)="_playSongService.playMusic(songIndex)">play</button>
+    <button (click)="_playSongService.playMusic(songInfo.indexOf(info))">play</button>
     <p class="songName">{{info.name}}</p>
     <p class="songDes">{{info.description}}</p>
 </div>

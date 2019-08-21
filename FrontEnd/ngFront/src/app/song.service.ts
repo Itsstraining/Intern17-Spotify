@@ -41,12 +41,10 @@ export class SongService {
         link: 'https://vnso-zn-11-tf-mp3-s1-zmp3.zadn.vn/9e7b36f03fb4d6ea8fa5/7532931169943217428?authen=exp=1566100890~acl=/9e7b36f03fb4d6ea8fa5/*~hmac=63a13d77d39c8359a86c667e6a552c60&filename=HaHaHa-Thanh-Duy.mp3',
       },
     ]
-    console.log(id)
     for (let song of SongService) {
       if (song.songID == id) {
         SongService = [];
         SongService.push(song);
-        console.log("true");
       }
     }
     return SongService;
