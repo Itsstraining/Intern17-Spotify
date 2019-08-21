@@ -1,30 +1,7 @@
-.mat-sidenav-container {
-    background-color: transparent;
-}
-
-.mat-sidenav {
-    width: 150px;
-}
-
-button {
-    padding: 0 0px;
-}
-
-ul {
-    list-style: none;
-    text-align: left;
-    size: 50px;
-    margin: 0px;
-    padding: 0px;
-    size: 75px;
-}
-
-img {
-    width: 125px;
-    height: 125px;
-    margin-left: 10px;
-}
-
-li {
-    margin-top: 25px;
+.example-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
