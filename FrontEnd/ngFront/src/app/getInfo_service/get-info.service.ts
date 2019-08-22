@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -32,8 +33,9 @@ export class GetInfoService {
   ]
 
   librarySongs = [];
+  songDetail = [];
 
-  getSongInfo() {
+  getSongsInfo() {
 
     //API
 
@@ -69,6 +71,15 @@ export class GetInfoService {
     }
   }
 
+  getSongInfo(index) {
+    console.log("TCL: GetInfoService -> getSongInfo -> index", index);
+    console.log("true");
+    this.songDetail = [];
+    this.songDetail.push(this.songs[index]);
+    this.router.navigate(['/','songs']);
+    return this.songDetail;
+  }
+
   manipulateOnLib(index) {
     for (let song in this.songs) {
       if (song == index) {
@@ -91,6 +102,6 @@ export class GetInfoService {
     //API
   }
 
-  constructor() { }
+  constructor(private router: Router) { }
 }
 

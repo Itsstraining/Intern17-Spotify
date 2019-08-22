@@ -1,17 +1,21 @@
 <div *ngFor="let song of _getInfoService.displaySongByGenre(sec)" class="musicDiv">
     <img class="songImg" src="../../../assets/images/logo.png" alt="">
-    <div class="container">
-        <button mat-fab (click)="_playSongService.playMusic(songInfo.indexOf(song))" class="playMusic">
-            <mat-icon class="playIcon">play_arrow</mat-icon>
-        </button>
-        <button mat-icon-button matTooltip="Save to your library" class="loveButton"
-            aria-label="Button that displays a tooltip when focused or hovered over" (click)="_getInfoService.manipulateOnLib(songInfo.indexOf(song))">
-            <mat-icon class="loveIcon">favorite</mat-icon>
-        </button>
-    </div>
+    <a routerLink="/songs">
+        <div class="container">
+            <button mat-fab (click)="_playSongService.playMusic(songInfo.indexOf(song))" class="playMusic">
+                <mat-icon class="playIcon">play_arrow</mat-icon>
+            </button>
+            <button mat-icon-button matTooltip="Save to your library" class="loveButton"
+                aria-label="Button that displays a tooltip when focused or hovered over"
+                (click)="_getInfoService.manipulateOnLib(songInfo.indexOf(song))">
+                <mat-icon class="loveIcon">favorite</mat-icon>
+            </button>
+        </div>
+    </a>
 
-    <p class="songName" *ngIf="song.songName.length < 11">{{song.songName}}</p>
-    <p class="songName" *ngIf="song.songName.length > 11">{{song.songName.substring(0,12) + '...'}}</p>
+    <p class="songName" *ngIf="song.songName.length < 11" (click)="_getInfoService.getSongInfo(songInfo.indexOf(song))">{{song.songName}}</p>
+    <p class="songName" *ngIf="song.songName.length > 11" (click)="_getInfoService.getSongInfo(songInfo.indexOf(song))"><a
+            >{{song.songName.substring(0,12) + '...'}}</a></p>
 
     <p class="songDes" *ngIf="song.description.length < 60">{{song.description}}</p>
     <p class="songDes" *ngIf="song.description.length > 60">{{song.description.substring(0,61) + '...'}}</p>

@@ -1,21 +1,21 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AppComponent } from './app.component';
 import { SongDetailsComponent } from './components/song-details/song-details.component';
+import { HomeBodyComponent } from './components/home-body/home-body.component';
 
 const routes: Routes = [
-  // {
-  //   path: 'home',
-  //   component: AppComponent
-  // },
+  {
+    path: '',
+    component: HomeBodyComponent
+  },
   {
     path: 'songs',
     component: SongDetailsComponent
   },
-  // {
-  //   path: '',
-  //   component: AppComponent
-  // }
+  {
+    path: 'home',
+    redirectTo: 'HomeBodyComponent'
+  }
 ];
 
 @NgModule({
