@@ -34,7 +34,12 @@ import { environment } from 'src/environments/environment';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { LoginmenuComponent } from './components/loginmenu/loginmenu.component';
 import { SongDetailsComponent } from './components/song-details/song-details.component';
+import { HomeBodyComponent } from './components/home-body/home-body.component';
+import { SongInfoComponent } from './components/song-info/song-info.component';
+import { SongQueueComponent } from './components/song-queue/song-queue.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { MyDialogComponent } from './components/my-dialog/my-dialog.component';
+import { OpenDialogComponent } from './components/open-dialog/open-dialog.component';
 
 @NgModule({
   declarations: [
@@ -47,11 +52,16 @@ import {MatDialogModule} from '@angular/material/dialog';
     SidenavComponent,
     LoginmenuComponent,
     SongDetailsComponent,
+    MyDialogComponent,
+    OpenDialogComponent,
+    HomeBodyComponent,
+    HomeBodyComponent,
+    SongInfoComponent,
+    SongQueueComponent,
     
   ],
   imports: [
     MatDialogModule,
-
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
@@ -73,10 +83,12 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatInputModule,
     MatTooltipModule,
   ],
+  entryComponents:[
+    MyDialogComponent,
+  ],
   providers: [SongService, PlaySongServiceService, GetInfoService],
   bootstrap: [AppComponent]
 })
-
 
 export class AppModule {
 

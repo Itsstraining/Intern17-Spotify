@@ -15,7 +15,7 @@ export class MusicOverviewComponent implements OnInit {
   songInfo = [];
 
   ngOnInit() {
-    this.songInfo = this._getInfoService.getSongInfo();
+    this.songInfo = this._getInfoService.getSongsInfo();
   }
 
 }

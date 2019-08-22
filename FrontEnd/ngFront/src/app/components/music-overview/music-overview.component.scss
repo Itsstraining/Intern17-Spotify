@@ -64,6 +64,11 @@
     margin-bottom: unset;
 }
 
+.songName:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .songDes {
     word-break: break-word;
     font-family: 'Courier New', Courier, monospace;

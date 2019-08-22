@@ -6,12 +6,11 @@
 .mat-sidenav {
     width: 100%;
     text-align: center;
+    display: flex;
 }
 
-ul {
+mat-list {
     list-style: none;
-    text-align: left;
-    size: 50px;
     margin: 0px;
     padding: 0px;
     size: 75px;
@@ -27,6 +26,7 @@ img {
     height: 150px;
 }
 
-.buttonaddplay {
-    bottom: 0;
+button {
+    width: 100%;
+    text-align: left;
 }

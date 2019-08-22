@@ -11,7 +11,7 @@ export class SectionDividerComponent implements OnInit {
   constructor() { }
 
   //Can create different type of section 
-  public sectionsByGenre = ['POP','JAZZ'];
+  public sectionsByGenre = ['pop','jazz'];
   ngOnInit() {
   }
 
