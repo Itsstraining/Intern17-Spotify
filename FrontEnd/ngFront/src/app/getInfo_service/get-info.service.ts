@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -32,8 +33,9 @@ export class GetInfoService {
   ]
 
   librarySongs = [];
+  songDetail = [];
 
-  getSongInfo() {
+  getSongsInfo() {
 
     //API
 
@@ -45,7 +47,7 @@ export class GetInfoService {
     //API
 
     let songByGenre = this.songs.filter((element) => {
-      return element.genre == genre.toLowerCase();
+      return element.genre == genre;
     });
 
     //Run the loop to utilize the API of getting song by genre (equal to get all the song displaying inside the body)
@@ -69,11 +71,20 @@ export class GetInfoService {
     }
   }
 
+  getSongInfo(index) {
+    this.songDetail = [];
+    this.songDetail.push(this.songs[index]);
+    this.router.navigate(['/','songs']);
+    return this.songDetail;
+  }
+
   manipulateOnLib(index) {
     for (let song in this.songs) {
       if (song == index) {
         if (this.librarySongs.length == 0) {
+          console.log("TCL: GetInfoService -> manipulateOnLib -> this.librarySongs", this.librarySongs)
           this.librarySongs.push(this.songs[song]);
+          console.log("TCL: GetInfoService -> manipulateOnLib -> this.librarySongs", this.librarySongs)
           return 'added';
         }
         else {
@@ -91,6 +102,6 @@ export class GetInfoService {
     //API
   }
 
-  constructor() { }
+  constructor(private router: Router) { }
 }
 
