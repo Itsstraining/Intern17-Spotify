@@ -26,7 +26,6 @@ export class PlaySongServiceService {
   }
 
   public playMusic(index) {
-    console.log("TCL: PlaySongServiceService -> playMusic -> id", index)
     this.msaapDisplayTitle = true;
     this.msaapDisplayPlayList = false;
     this.msaapPageSizeOptions = [3];
@@ -34,8 +33,6 @@ export class PlaySongServiceService {
     // Material Style Advance Audio Player Playlist
     this.song.title = this._getInfoService.getSong(index).songName;
     this.song.link = this._getInfoService.getSong(index).url;
-    console.log("TCL: PlaySongServiceService -> playMusic -> this.song", this.song)
-    
     this.msaapPlaylist.push(this.song);
   }
 }

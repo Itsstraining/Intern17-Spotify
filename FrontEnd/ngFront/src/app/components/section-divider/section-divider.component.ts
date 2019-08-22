@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EventEmitter } from 'events';
 // import { MusicOverviewComponent } from '../music-overview/music-overview.component';
 @Component({
   selector: 'app-section-divider',
@@ -9,7 +10,8 @@ export class SectionDividerComponent implements OnInit {
 
   constructor() { }
 
-  items = ['Section1','Section2'];
+  //Can create different type of section 
+  public sectionsByGenre = ['POP','JAZZ'];
   ngOnInit() {
   }
 
