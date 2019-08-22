@@ -5,7 +5,8 @@
 }
 
 .mat-sidenav {
-    width: 150px;
+    width: 100%;
+    text-align: center;
 }
 
 ul {
@@ -17,10 +18,16 @@ ul {
     size: 75px;
 }
 
-mat-button {
-    padding: 100%;
-}
-
 .librarySongsLink {
     text-decoration: none;
+}
+
+img {
+    margin-top: 15px;
+    width: 150px;
+    height: 150px;
+}
+
+.buttonaddplay {
+    bottom: 0;
 }

@@ -47,7 +47,7 @@ export class GetInfoService {
     //API
 
     let songByGenre = this.songs.filter((element) => {
-      return element.genre == genre.toLowerCase();
+      return element.genre == genre;
     });
 
     //Run the loop to utilize the API of getting song by genre (equal to get all the song displaying inside the body)
@@ -72,8 +72,6 @@ export class GetInfoService {
   }
 
   getSongInfo(index) {
-    console.log("TCL: GetInfoService -> getSongInfo -> index", index);
-    console.log("true");
     this.songDetail = [];
     this.songDetail.push(this.songs[index]);
     this.router.navigate(['/','songs']);
@@ -84,7 +82,9 @@ export class GetInfoService {
     for (let song in this.songs) {
       if (song == index) {
         if (this.librarySongs.length == 0) {
+          console.log("TCL: GetInfoService -> manipulateOnLib -> this.librarySongs", this.librarySongs)
           this.librarySongs.push(this.songs[song]);
+          console.log("TCL: GetInfoService -> manipulateOnLib -> this.librarySongs", this.librarySongs)
           return 'added';
         }
         else {

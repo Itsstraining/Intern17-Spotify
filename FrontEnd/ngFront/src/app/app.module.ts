@@ -37,6 +37,7 @@ import { SongDetailsComponent } from './components/song-details/song-details.com
 import { HomeBodyComponent } from './components/home-body/home-body.component';
 import { SongInfoComponent } from './components/song-info/song-info.component';
 import { SongQueueComponent } from './components/song-queue/song-queue.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -53,8 +54,11 @@ import { SongQueueComponent } from './components/song-queue/song-queue.component
     HomeBodyComponent,
     SongInfoComponent,
     SongQueueComponent,
+    
   ],
   imports: [
+    MatDialogModule,
+
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
@@ -79,7 +83,6 @@ import { SongQueueComponent } from './components/song-queue/song-queue.component
   providers: [SongService, PlaySongServiceService, GetInfoService],
   bootstrap: [AppComponent]
 })
-
 
 export class AppModule {
 

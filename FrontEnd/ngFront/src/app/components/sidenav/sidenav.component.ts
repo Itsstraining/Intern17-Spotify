@@ -7,8 +7,9 @@ import { GetInfoService } from '../../getInfo_service/get-info.service';
 })
 export class SidenavComponent implements OnInit {
 
-  constructor(public _getInfoService: GetInfoService) { }
-
+  constructor(public _getInfoService: GetInfoService) { 
+  }
+ 
   ngOnInit() {
   }
 

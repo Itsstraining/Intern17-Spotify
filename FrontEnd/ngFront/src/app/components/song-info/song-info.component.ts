@@ -9,7 +9,6 @@ import { GetInfoService } from '../../getInfo_service/get-info.service';
 export class SongInfoComponent implements OnInit {
 
   constructor(public _getInfoService: GetInfoService) { 
-    console.log(_getInfoService.songDetail[0]);
   }
 
   ngOnInit() {

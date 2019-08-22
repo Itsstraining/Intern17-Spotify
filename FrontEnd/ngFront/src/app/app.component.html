@@ -1,29 +1,22 @@
-<mat-toolbar class="containers">
-    <app-sidenav class="item item1"></app-sidenav>
-    <app-logomucsic class="item item2"></app-logomucsic>
-    <span class="example-fill-remaining-space"></span>
-    <app-search-nav class="item item3"></app-search-nav>
-    <span class="example-fill-remaining-space2"></span>
-    <app-loginmenu class="item item4"></app-loginmenu>
-</mat-toolbar>
+<mat-sidenav-container>
 
-<mat-drawer-container>
+    <mat-sidenav opened mode="side" fixedInViewport>
+        <app-sidenav></app-sidenav>
+    </mat-sidenav>
 
-    <mat-drawer mode="side" opened fixedInViewport>
-        <button mat-flat-button>
-            <mat-icon>home</mat-icon>
-        </button>
-
-        <button mat-flat-button>
-            <mat-icon>add_circle_outline</mat-icon>
-        </button>
-
-    </mat-drawer>
-
-    <mat-drawer-content>
-
+    <mat-sidenav-content>
+        <mat-toolbar class="containers">
+            <span></span>
+            <app-search-nav class="item item3"></app-search-nav>
+            <app-loginmenu class="item item4"></app-loginmenu>
+        </mat-toolbar>
         <!--Add new content here-->
-        <router-outlet></router-outlet>
-        
-    </mat-drawer-content>
-</mat-drawer-container>
+        <mat-divider>
+        </mat-divider>
+        <div style="padding-top: 5%">
+            <router-outlet></router-outlet>
+        </div>
+        <app-music-controller *ngIf="_playSongService.isAvailable()"></app-music-controller>
+    </mat-sidenav-content>
+
+</mat-sidenav-container>
