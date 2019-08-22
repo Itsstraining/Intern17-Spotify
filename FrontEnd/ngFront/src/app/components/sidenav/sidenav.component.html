@@ -2,30 +2,33 @@
     <img src="../../../assets/images/logo.png" alt="" srcset="">
     <h1>ITSSFY</h1>
     <mat-list>
-        <ul>
-            <li><button mat-button>
-                    <mat-icon aria-hidden="false" aria-label="Example home icon" class="right">home</mat-icon> Home
-                </button></li>
-            <li><button mat-button>
-                    <mat-icon aria-hidden="false" aria-label="Example home icon" class="right">folder</mat-icon> Browser
-                </button></li>
-            <li>
+        <div class="item item1">
+            <button mat-button>
+                <mat-icon aria-hidden="false" aria-label="Example home icon" class="right">home</mat-icon> Home
+            </button>
+        </div>
+
+        <div class="item item3">
+            <button mat-button class="buttonaddplay" (click)="openDialog()">
+                <mat-icon aria-hidden="false" aria-label="Example home icon" class="right">add_circle_outline
+                </mat-icon> Add Playlist
+            </button>
+        </div>
+
+        <div class="item item2">
+            <button mat-button>
                 <mat-icon aria-hidden="false" aria-label="Example home icon" class="right">headset</mat-icon>
                 Playlist
+            </button>
 
-                <div class="libSongs">
-                    <p *ngFor="let libSong of _getInfoService.librarySongs" class="librarySongs">
-                        <a href="#" *ngIf="libSong.songName.length > 15" class="librarySongsLink">{{libSong.songName.substring(0,16) + '...'}}</a>
-                        <a href="#" *ngIf="libSong.songName.length < 15" class="librarySongsLink">{{libSong.songName}}</a>
-                    </p>
-                </div>
-            </li>
-            <li><button mat-button class="buttonaddplay">
-                    <mat-icon aria-hidden="false" aria-label="Example home icon" class="right">add_circle_outline
-                    </mat-icon>
-                    Add
-                    Playlist
-                </button></li>
-        </ul>
+            <div class="libSongs">
+                <p *ngFor="let libSong of _getInfoService.librarySongs" class="librarySongs">
+                    <a href="#" *ngIf="libSong.songName.length > 15" class="librarySongsLink">{{libSong.songName.substring(0,16) + '...'}}</a>
+                    <a href="#" *ngIf="libSong.songName.length < 15" class="librarySongsLink">{{libSong.songName}}</a>
+                </p>
+            </div>
+        </div>
+
+
     </mat-list>
 </mat-sidenav>
