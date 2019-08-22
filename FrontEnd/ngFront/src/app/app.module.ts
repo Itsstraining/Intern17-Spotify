@@ -34,6 +34,9 @@ import { environment } from 'src/environments/environment';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { LoginmenuComponent } from './components/loginmenu/loginmenu.component';
 import { SongDetailsComponent } from './components/song-details/song-details.component';
+import { HomeBodyComponent } from './components/home-body/home-body.component';
+import { SongInfoComponent } from './components/song-info/song-info.component';
+import { SongQueueComponent } from './components/song-queue/song-queue.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { MyDialogComponent } from './components/my-dialog/my-dialog.component';
 import { OpenDialogComponent } from './components/open-dialog/open-dialog.component';
@@ -49,8 +52,15 @@ import { OpenDialogComponent } from './components/open-dialog/open-dialog.compon
     SidenavComponent,
     LoginmenuComponent,
     SongDetailsComponent,
+<<<<<<< HEAD
     MyDialogComponent,
     OpenDialogComponent,
+=======
+    HomeBodyComponent,
+    HomeBodyComponent,
+    SongInfoComponent,
+    SongQueueComponent,
+>>>>>>> c0996a036c2d4e6f3bd937f27f79745ca0877cce
     
   ],
   imports: [
@@ -82,7 +92,6 @@ import { OpenDialogComponent } from './components/open-dialog/open-dialog.compon
   providers: [SongService, PlaySongServiceService, GetInfoService],
   bootstrap: [AppComponent]
 })
-
 
 export class AppModule {
 

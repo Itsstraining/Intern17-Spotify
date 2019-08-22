@@ -1,5 +1,5 @@
 <mat-list *ngFor="let section of sectionsByGenre" class="sectionDiv">
-        <mat-list-item>{{section}}</mat-list-item>
+        <mat-list-item>{{section.toUpperCase()}}</mat-list-item>
         <mat-divider></mat-divider>
         <app-music-overview [sec] = "section"></app-music-overview>
 </mat-list>   

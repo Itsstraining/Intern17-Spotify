@@ -11,10 +11,12 @@
             <app-loginmenu class="item item4"></app-loginmenu>
         </mat-toolbar>
         <!--Add new content here-->
-        <app-section-divider></app-section-divider>
+        <mat-divider>
+        </mat-divider>
+        <div style="padding-top: 5%">
+            <router-outlet></router-outlet>
+        </div>
         <app-music-controller *ngIf="_playSongService.isAvailable()"></app-music-controller>
     </mat-sidenav-content>
 
 </mat-sidenav-container>
-
-<router-outlet></router-outlet>
