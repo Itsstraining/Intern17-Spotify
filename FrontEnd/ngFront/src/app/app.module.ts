@@ -52,15 +52,12 @@ import { OpenDialogComponent } from './components/open-dialog/open-dialog.compon
     SidenavComponent,
     LoginmenuComponent,
     SongDetailsComponent,
-<<<<<<< HEAD
     MyDialogComponent,
     OpenDialogComponent,
-=======
     HomeBodyComponent,
     HomeBodyComponent,
     SongInfoComponent,
     SongQueueComponent,
->>>>>>> c0996a036c2d4e6f3bd937f27f79745ca0877cce
     
   ],
   imports: [
