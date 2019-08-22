@@ -1,25 +1,20 @@
-<mat-toolbar class="container">
-    <app-sidenav></app-sidenav>
-    <app-search-nav class="item item3"></app-search-nav>
-    <app-loginmenu class="item item4"></app-loginmenu>
-</mat-toolbar>
+<mat-sidenav-container>
 
-<mat-drawer-container>
+    <mat-sidenav opened mode="side" fixedInViewport>
+        <app-sidenav></app-sidenav>
+    </mat-sidenav>
 
-    <mat-drawer mode="side" opened fixedInViewport>
-        <p>abc</p>
-
-    </mat-drawer>
-
-    <mat-drawer-content>
-
+    <mat-sidenav-content>
+        <mat-toolbar class="containers">
+            <span></span>
+            <app-search-nav class="item item3"></app-search-nav>
+            <app-loginmenu class="item item4"></app-loginmenu>
+        </mat-toolbar>
         <!--Add new content here-->
         <app-section-divider></app-section-divider>
+        <app-music-controller *ngIf="_playSongService.isAvailable()"></app-music-controller>
+    </mat-sidenav-content>
 
+</mat-sidenav-container>
 
-    </mat-drawer-content>
-
-</mat-drawer-container>
-
-<app-music-controller *ngIf="_playSongService.isAvailable()"></app-music-controller>
 <router-outlet></router-outlet>

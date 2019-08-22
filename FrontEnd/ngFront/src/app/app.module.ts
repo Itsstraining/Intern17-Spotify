@@ -34,6 +34,7 @@ import { environment } from 'src/environments/environment';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { LoginmenuComponent } from './components/loginmenu/loginmenu.component';
 import { SongDetailsComponent } from './components/song-details/song-details.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -46,8 +47,11 @@ import { SongDetailsComponent } from './components/song-details/song-details.com
     SidenavComponent,
     LoginmenuComponent,
     SongDetailsComponent,
+    
   ],
   imports: [
+    MatDialogModule,
+
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,

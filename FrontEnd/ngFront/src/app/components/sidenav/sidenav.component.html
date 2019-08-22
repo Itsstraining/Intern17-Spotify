@@ -1,6 +1,7 @@
-<mat-sidenav-container class="example-container">
-
-    <mat-sidenav #sidenav>
+<mat-sidenav #sidenav opened mode="side">
+    <img src="../../../assets/images/logo.png" alt="" srcset="">
+    <h1>ITSSFY</h1>
+    <mat-list>
         <ul>
             <li><button mat-button>
                     <mat-icon aria-hidden="false" aria-label="Example home icon" class="right">home</mat-icon> Home
@@ -8,10 +9,10 @@
             <li><button mat-button>
                     <mat-icon aria-hidden="false" aria-label="Example home icon" class="right">folder</mat-icon> Browser
                 </button></li>
-            <li><button mat-button>
-                    <mat-icon aria-hidden="false" aria-label="Example home icon" class="right">headset</mat-icon>
-                    Playlist
-                </button>
+            <li>
+                <mat-icon aria-hidden="false" aria-label="Example home icon" class="right">headset</mat-icon>
+                Playlist
+
                 <div class="libSongs">
                     <p *ngFor="let libSong of _getInfoService.librarySongs" class="librarySongs">
                         <a href="#" *ngIf="libSong.songName.length > 15" class="librarySongsLink">{{libSong.songName.substring(0,16) + '...'}}</a>
@@ -19,25 +20,12 @@
                     </p>
                 </div>
             </li>
-            <li><button mat-button>
+            <li><button mat-button class="buttonaddplay">
                     <mat-icon aria-hidden="false" aria-label="Example home icon" class="right">add_circle_outline
                     </mat-icon>
                     Add
                     Playlist
                 </button></li>
-            <li><button mat-button>
-                    <mat-icon aria-hidden="false" aria-label="Example home icon" class="right">settings</mat-icon>
-                    Settings
-                    <span class="logo"><img src="../../../assets/images/logo.png" alt=""></span>
-                </button></li>
         </ul>
-    </mat-sidenav>
-
-    <mat-sidenav-content>
-        <button mat-button (click)="sidenav.toggle()">
-                <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-            </button>
-        <span>ITSS</span>
-    </mat-sidenav-content>
-
-</mat-sidenav-container>
+    </mat-list>
+</mat-sidenav>
