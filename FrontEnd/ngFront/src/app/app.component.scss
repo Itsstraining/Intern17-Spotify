@@ -14,7 +14,7 @@ mat-toolbar {
     box-shadow: 1px;
     min-width: 0px;
     max-width: 88% !important;
-    box-shadow: 10px 5px 5px grey;
+    box-shadow: 10px 5px 5px rgba($color: grey, $alpha: 0.2);
 }
 
 mat-sidenav {
