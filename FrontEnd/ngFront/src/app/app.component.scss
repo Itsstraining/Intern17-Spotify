@@ -11,10 +11,11 @@ mat-toolbar {
     top: 0;
     right: 0;
     height: 64px;
-    box-shadow: 1px;
     min-width: 0px;
     max-width: 88% !important;
     box-shadow: 10px 5px 5px rgba($color: grey, $alpha: 0.2);
+    background-color: pink;
+    background-image: linear-gradient(to right, #ffc0d869, #005dff7d, #ffc0d869, #005dff7d, )
 }
 
 mat-sidenav {

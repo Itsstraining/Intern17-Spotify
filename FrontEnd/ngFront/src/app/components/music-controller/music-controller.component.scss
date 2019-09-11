@@ -1,5 +1,5 @@
 .mat-advanced-audio-player {
-    background-color: black;
+    background-color: black !important;
 }
 
 #musicPlayingBar_container {
@@ -7,9 +7,14 @@
     width: 88%;
     position: fixed;
     bottom: 0;
-    color: black
+    color: black;
+    background-color: black !important;
 }
 
 .ngx-advanced-audio-player[_ngcontent-owm-c18] {
+    background: black !important;
+}
+
+#musicPlayingBar {
     background: black !important;
 }

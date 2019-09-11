@@ -17,11 +17,13 @@ export class LoginmenuComponent implements OnInit {
       this.name = usr.displayName,
       this.img = usr.photoURL,
       this.email=usr.email
+      
     })
   }
   name = ""
   img = ""
   email = ""
+  account_circle = "account_circle"
  
   
   async logout() {
