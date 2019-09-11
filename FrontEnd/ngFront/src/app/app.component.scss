@@ -3,16 +3,19 @@
     padding: 0%;
 }
 
-.item {
-    margin: 0px;
-    padding: 0px;
-}
-
 mat-toolbar {
     position: fixed;
+    justify-content: space-between;
     z-index: 1;
-    width: 88%;
-    justify-content: space-between
+    padding: 0 0;
+    top: 0;
+    right: 0;
+    height: 64px;
+    min-width: 0px;
+    max-width: 88% !important;
+    box-shadow: 10px 5px 5px rgba($color: grey, $alpha: 0.2);
+    background-color: pink;
+    background-image: linear-gradient(to right, #ffc0d869, #005dff7d, #ffc0d869, #005dff7d, )
 }
 
 mat-sidenav {
@@ -21,5 +24,6 @@ mat-sidenav {
 }
 
 mat-sidenav-content {
+    padding-top: 40px;
     width: 88%;
 }

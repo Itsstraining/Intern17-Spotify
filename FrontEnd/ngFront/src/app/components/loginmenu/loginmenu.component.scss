@@ -1,18 +1,12 @@
-.img-Photo img {
-    width: 40px;
-    height: 40px;
-    border: 1px;
-    border-radius: 200px
+.Avatar {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%
 }
 
-.mat-form-field {
-    width: 100%;
-    padding: 0 0
-}
-
-.search input {
-    padding-bottom: 2px;
-    font-size: 15px;
+.AtaGround {
+    display: table;
+    margin: 3px auto;
 }
 
 .menu1 {
@@ -32,4 +26,12 @@
 .menu2 button {
     margin: 0 8px;
     padding: 0 5px
+}
+
+i {
+    margin: 2px 5px;
+}
+
+.menu3 {
+    overflow: hidden;
 }

@@ -1,12 +1,10 @@
 <div *ngFor="let song of _getInfoService.displaySongByGenre(sec)" class="musicDiv">
-    <img class="songImg" src="../../../assets/images/logo.png" alt="">
+    <img class="songImg" src="/assets/images/logo.png" alt="">
     <div class="container">
         <button mat-fab (click)="_playSongService.playMusic(songInfo.indexOf(song))" class="playMusic">
             <mat-icon class="playIcon">play_arrow</mat-icon>
         </button>
-        <button mat-icon-button matTooltip="Save to your library" class="loveButton"
-            aria-label="Button that displays a tooltip when focused or hovered over"
-            (click)="_getInfoService.manipulateOnLib(songInfo.indexOf(song))">
+        <button mat-icon-button matTooltip="Save to your library" class="loveButton" aria-label="Button that displays a tooltip when focused or hovered over" (click)="_getInfoService.manipulateOnLib(songInfo.indexOf(song))">
             <mat-icon class="loveIcon">favorite</mat-icon>
         </button>
     </div>

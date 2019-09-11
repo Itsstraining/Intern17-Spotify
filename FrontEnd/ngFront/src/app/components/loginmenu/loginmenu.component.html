@@ -1,18 +1,20 @@
 <div class="menu">
-    <button class="menu" mat-button [matMenuTriggerFor]="beforeMenu"><img width="30px" height="30px" src="{{img}}" alt=""> 
-        <mat-icon>account_circle</mat-icon></button>
-
-    <mat-menu #beforeMenu="matMenu" xPosition="before">
-        <h2 class="menu1" mat-menu-item><i class="material-icons">
+    <button class="menu" mat-button [matMenuTriggerFor]="beforeMenu">
+        <mat-icon>{{account_circle}}</mat-icon></button>
+    <div class="menu3">
+        <mat-menu #beforeMenu="matMenu" xPosition="before">
+            <div class="AtaGround"><img class="Avatar" src="{{img}}" alt=""> </div>
+            <h2 class="menu1" mat-menu-item><i class="material-icons">
                 perm_identity
                 </i>{{name}}</h2>
-        <span class="menu1" mat-menu-item><i class="material-icons">
+            <span class="menu1" mat-menu-item><i class="material-icons">
                 email
                 </i>{{email}}</span>
-        <hr>
-        <div class="menu2">
-            <button (click)="login()" width="20px" mat-stroked-button color="primary"><i class="material-icons">input</i>LogIn</button>
-            <button (click)="logout()" width="20px" mat-stroked-button><i class="material-icons">arrow_right_alt</i>LogOut</button>
-        </div>
-    </mat-menu>
+            <hr>
+            <div class="menu2">
+                <button (click)="login()" width="20px" mat-stroked-button color="primary"><i class="material-icons">input</i>LogIn</button>
+                <button (click)="logout()" width="20px" mat-stroked-button><i class="material-icons">arrow_right_alt</i>LogOut</button>
+            </div>
+        </mat-menu>
+    </div>
 </div>

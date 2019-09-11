@@ -31,17 +31,14 @@
         background: transparent;
         border: 2px white solid;
     }
-
     mat-icon {
         margin: -10px 0px 0px -5px;
         font-size: 30px;
-
     }
-
     .playMusic:hover {
         width: 70px;
         height: 70px;
-        margin: 55px 62px 0px 58px; 
+        margin: 55px 62px 0px 58px;
         border: 4px white solid;
         mat-icon {
             margin: -5px 0px 0px -3px;
@@ -50,14 +47,13 @@
             height: 70px;
         }
     }
-
     .loveButton {
         color: white;
         position: absolute;
         margin-top: 132px;
         margin-left: 73px;
     }
-} 
+}
 
 .songName {
     word-break: break-word;
@@ -80,4 +76,3 @@
     color: rgb(70, 70, 70);
     margin-top: unset;
 }
-

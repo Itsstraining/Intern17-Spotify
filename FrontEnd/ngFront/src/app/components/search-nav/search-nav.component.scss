@@ -1,11 +1,13 @@
-        .search {
-            color: rgba(29, 22, 22, 0.8);
-            min-width: 650px;
-            max-width: 650px;
-            width: 100%;
-            padding: 0 0;
-        }
-        
-        mat-form-field {
-            width: 650px;
-        }
+.search {
+    color: rgba(29, 22, 22, 0.8);
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    display: inline-flex;
+    padding: 0 0;
+}
+
+mat-form-field {
+    width: 650px;
+    padding: 0 0
+}
